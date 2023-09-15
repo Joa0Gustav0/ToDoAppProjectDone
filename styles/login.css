@@ -1,0 +1,288 @@
+.classy-logo{
+    position: absolute;
+    left: 30px;
+    top: 30px;
+
+    width: 50px;
+    height: 50px;
+}
+.classy-logo > img{
+    transition: all .2s;
+    width: 100%;
+}
+.classy-logo:hover > img{
+    transform: scale(110%, 110%);
+}
+.classy-logo:active > img{
+    transform: scale(0);
+}
+
+.login-paths-main{
+    position: relative;
+
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+
+    width: 100%;
+    min-height: calc(100vh - 190px);
+    padding: 95px 0;
+}
+
+.login-paths__sections{
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    width: 100%;
+    max-width: 50%;
+    min-width: 400px;
+    min-height: calc(100vh - 190px);
+    padding: 0 30px;
+}
+
+.quick-access-section__title{
+    font-size: 2em;
+    color: #4D3D87;
+}
+.quick-access-section__instructions-text{
+    text-align: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #4D3D87;
+}
+.quick-access-section span{
+    color: #4D3D87;
+    font-weight: 600;
+}
+.quick-access-section__users-list{
+    width: 100%;
+    padding: 10px 20px;
+    padding-top: 25px;
+    overflow-y: scroll;
+    height: calc(100vh - 280px);
+}
+.quick-access-section__no-users-sign{
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 1em;
+    font-weight: 400;
+    text-align: center;
+}
+.quick-access-section__users-list__user-container{
+    position: relative;
+
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 25px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25);
+}
+.quick-access-section__users-list__user-container__icon{
+    width: 30px;
+    height: 30px;
+}
+.quick-access-section__users-list__user-container__username{
+    color: black;
+    font-size: .8em;
+}
+.quick-access-section__users-list__user-container__type-icon{
+    width: 20px;
+    height: 20px;
+    color: rgba(0, 0, 0, 0.473);
+}
+.quick-access-section__users-list__user-container__remove-button{
+    position: absolute;
+    transform: translate(50%, -50%);
+    right: 0px;
+    top: 0px;
+
+    width: 20px;
+    height: 20px;
+    padding: 5px;
+    border-radius: 100%;
+    background-color: white;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+}
+.quick-access-section__users-list__user-container__remove-button:hover{
+    cursor: pointer;
+    color: #ff0050;
+}
+.quick-access-section__users-list__user-container__remove-button:active{
+    transform: scale(0);
+}
+
+.login-section__title{
+    color: #4D3D87;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+.login-section__classy-logo{
+    width: 50px;
+    height: 50px;
+    margin-bottom: 40px;
+}
+.login-section__inputs-container{
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid black;
+}
+.login-section__inputs-container.on-error{
+    margin-bottom: 0;
+    border: 1px solid red;
+}
+.login-section__inputs-container__inputs{
+    width: 100%;
+    border: 0;
+    outline: none;
+    margin: 0 10px;
+}
+.login-section__inputs-container__input-icon{
+    width: 20px;
+    height: 20px;
+}
+.login-section__inputs-container__input-eye-icon{
+    display: none;
+}
+.login-section__inputs-container__input-eye-icon:hover{
+    cursor: pointer;
+}
+.login-section__fields-error-text{
+    display: none;
+
+    color: #ff0050;
+    font-size: .8em;
+    align-self: flex-start;
+    margin-bottom: 20px;
+}
+.login-section__fields-error-text.show-error-message{
+    display: block;
+}
+.login-section__forgot-password{
+    color: #4D3D87;
+    margin-bottom: 40px;
+    align-self: flex-start;
+}
+.login-section__login-button{
+    transition: all .25s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    padding: 10px;
+    color: white;
+    max-width: 320px;
+    font-weight: 400;
+    border-radius: 10px;
+    background-color: #4D3D87;
+}
+.login-section__login-button:hover{
+    cursor: pointer;
+    transform: translateY(-10px);
+    box-shadow: 0px 10px 0px #392d63;
+}
+.login-section__login-button:active{
+    transform: translateY(0px);
+    box-shadow: none;
+    background-color: #392d63;
+}
+
+.section__section-hooker{
+    position: absolute;
+    top: -45px;
+
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    width: 50%;
+    height: 45px;
+    padding: 5px;
+    border: 2px solid #4D3D87;
+    border-bottom: 0px solid #4D3D87;
+    background-color: white;
+}
+.section__section-hooker__icon{
+    width: 25px;
+    height: 25px;
+    margin-right: 5px;
+}
+.section__section-hooker__section-name{
+    font-size: 1.25em;
+}
+.quick-access-section__section-hooker{
+    left: 28px;
+    border-radius: 5px 25px 0px 0px;
+    
+}
+.login-section__section-hooker{
+    right: 28px;
+    border-radius: 25px 5px 0px 0px;
+}
+.sections-divisor{
+    position: absolute;
+    top: 0px;
+    left: calc(50% - 1px);
+    height: 100%;
+    border-left: 1px solid rgba(0, 0, 0, 0.5);
+}
+.sections-divisor h1{
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+
+    font-size: 1em;
+    background-color: white;
+    color: rgba(0, 0, 0, 0.5);
+}
+.login-section__account-creation-link{
+    color: black;
+    margin-top: 5px;
+    text-decoration: underline;
+}
+.button-pseudo-sign{
+    color: rgba(0, 0, 0, 0.3);
+    width: 100%;
+    margin-top: 40px;
+    max-width: 320px;
+    font-weight: 400;
+    text-align: center;
+}
+
+/*RESPOSIVINESS*/
+@media screen and (max-width: 799px){
+    .login-paths__sections{
+        background-color: white;
+        max-width: 500px;
+        min-width: 0px;
+        min-height: calc(100vh - 190px);
+    }
+    .login-section{
+        border-radius: 5px 0px 5px 5px;
+    }
+    .quick-access-section{
+        display: none;
+        border-radius: 0px 5px 5px 5px;
+    }
+    .sections-divisor{
+        display: none;
+    }
+}

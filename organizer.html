@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en" translate="no">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles/comum.css">
+    <link rel="stylesheet" href="styles/organizer.css">
+    <link rel="stylesheet" href="styles/footer.css">
+    <link rel="shortcut icon" href="media/favicon.ico" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClassY</title>
+</head>
+<body>
+    <header>
+        <a href="home.html" class="header__classy-logo">
+            <img src="media/classy-logo.png">
+        </a>
+    </header>
+    <section class="to-do-section">
+        <img src="media/to-do-section-picture.png" class="to-do-section__background-picture">
+        <nav class="to-do-section__alt-categories-tabs-container">
+            <div id="to-do" class="to-do-section__alt-categories-tabs-container__to-do-categories-tab"
+                onclick="setCurrentContainerVisible(this)">
+                <ion-icon name="pin"></ion-icon>
+                <h1>To do</h1>
+            </div>
+            <div id="doing" class="to-do-section__alt-categories-tabs-container__to-do-categories-tab"
+                onclick="setCurrentContainerVisible(this)">
+                <ion-icon name="alarm"></ion-icon>
+                <h1>Doing</h1>
+            </div>
+            <div id="done"  class="to-do-section__alt-categories-tabs-container__to-do-categories-tab"
+                onclick="setCurrentContainerVisible(this)">
+                <ion-icon name="checkmark-sharp"></ion-icon>
+                <h1>Done</h1>
+            </div>
+            <div class="shadow"></div>
+        </nav>
+        <div class="to-do-section__to-do-categorie-container to-do-section__categorie-containers c-purple">
+            <h1 class="to-do-section__categorie-containers__title">
+                <ion-icon name="pin"></ion-icon> To do
+            </h1>
+            <div class="to-do-section__categorie-containers__cards-list">
+            </div>
+            <h1 class="to-do-section__categorie-containers__add-card-button" onmousedown="getCurrentContainer(this)">
+                <ion-icon name="add"></ion-icon>
+                Add a new card
+            </h1>
+        </div>
+        <div class="to-do-section__categorie-containers__cards-list__card-model">
+            <div class="to-do-section__categorie-containers__cards-list__card__actions-buttons-container">
+                <abbr title="Send to the top">
+                    <ion-icon name="triangle" class="to-do-section__categorie-containers__cards-list__card__actions-buttons-container__actions-button
+                    to-do-section__categorie-containers__cards-list__card__actions-buttons-container__go-up-card-button" 
+                    onclick="sendCardToTop(this)"></ion-icon>
+                </abbr>
+                <abbr title="Change categorie">
+                    <ion-icon name="albums-sharp" class="to-do-section__categorie-containers__cards-list__card__actions-buttons-container__actions-button
+                    to-do-section__categorie-containers__cards-list__card__actions-buttons-container__change-card-categorie-button" onclick="openChangeCategorieTab(this)"></ion-icon>
+                </abbr>
+                <abbr title="Delete">
+                    <ion-icon name="trash-sharp" class="to-do-section__categorie-containers__cards-list__card__actions-buttons-container__actions-button
+                    to-do-section__categorie-containers__cards-list__card__actions-buttons-container__delete-card-button" onclick="openDeleteTab(this)"></ion-icon>
+                </abbr>
+            </div>
+            <h1 class="to-do-section__categorie-containers__cards-list__card__task-text" onclick="openEditCardTextTab(this)">
+                Do the math review, and do the test on wednesday.
+            </h1>
+        </div>
+        <div class="to-do-section__doing-categorie-container to-do-section__categorie-containers c-purple">
+            <h1 class="to-do-section__categorie-containers__title">
+                <ion-icon name="alarm"></ion-icon> Doing
+            </h1>
+            <div class="to-do-section__categorie-containers__cards-list">
+                
+            </div>
+            <h1 class="to-do-section__categorie-containers__add-card-button" onmousedown="getCurrentContainer(this)">
+                <ion-icon name="add"></ion-icon>
+                Add a new card
+            </h1>
+        </div>
+        <div class="to-do-section__done-categorie-container to-do-section__categorie-containers c-purple">
+            <h1 class="to-do-section__categorie-containers__title">
+                <ion-icon name="checkmark-sharp"></ion-icon> Done
+            </h1>
+            <div class="to-do-section__categorie-containers__cards-list">
+                
+            </div>
+            <h1 class="to-do-section__categorie-containers__add-card-button" onmousedown="getCurrentContainer(this)">
+                <ion-icon name="add"></ion-icon>
+                Add a new card
+            </h1>
+        </div>
+        <div class="to-do-section__other-categorie-containers-model to-do-section__other-categorie-containers-model-example c-purple"><!--
+         --><h1 id="title" class="to-do-section__categorie-containers__title">
+                <ion-icon name="book"></ion-icon> Other 1
+            </h1>
+            <div class="to-do-section__categorie-containers__cards-list">
+                
+            </div>
+            <h1 class="to-do-section__categorie-containers__add-card-button" onmousedown="getCurrentContainer(this)">
+                <ion-icon name="add"></ion-icon>
+                Add a new card
+            </h1>
+            <ion-icon name="close-circle-outline" 
+                    class="to-do-section__categorie-containers__delete-categorie-button"
+                    onmousedown="removeCurrentContainer(this)">
+            </ion-icon>
+            <div class="to-do-section__categorie-containers__color-containers" onclick="setColorsContainerState(this)">
+                <div class="to-do-section__categorie-containers__color-containers__color-button purple-color" onclick="setContainerColor(this)"></div>
+                <div class="to-do-section__categorie-containers__color-containers__color-button blue-color" onclick="setContainerColor(this)"></div>
+                <div class="to-do-section__categorie-containers__color-containers__color-button green-color" onclick="setContainerColor(this)"></div>
+                <div class="to-do-section__categorie-containers__color-containers__color-button yellow-color" onclick="setContainerColor(this)"></div>
+                <div class="to-do-section__categorie-containers__color-containers__color-button pink-color" onclick="setContainerColor(this)"></div>
+            </div>
+        </div>
+
+        <abbr title="Add a new categorie">
+            <ion-icon name="add" class="to-do-section__add-categorie-button"></ion-icon>
+        </abbr>
+        <h1 class="to-do-section__generate-classic-list" onclick="setGenerateButtonState(this)">
+            <span>&#x1F4C3;</span> Generate a classic ToDo list.
+        </h1>
+    </section>
+    <footer class="footer">
+        <main class="footer__main">
+            <section class="footer__main__website footer__main__sections">
+                <img src="media/classy-logo.png" class="footer__main__website__logo">
+                <p class="footer__main__website__slogan">
+                    Be organized. Be productive.
+                </p>
+            </section>
+            <section class="footer__main__author footer__main__sections">
+                <h1 class="footer__main__author__name">
+                    João Gustavo
+                </h1>
+                <div class="footer__main__author__socials">
+                    <a href="https://github.com/Joa0Gustav0" class="footer__main__author__socials__ancors" target="_blank" rel="external">
+                        <ion-icon name="logo-github"></ion-icon>
+                    </a>
+                    <a href="https://www.instagram.com/joao.gustavo_ff0050/" class="footer__main__author__socials__ancors" target="_blank" rel="external">
+                        <ion-icon name="logo-instagram"></ion-icon>
+                    </a>
+                </div>
+            </section>
+            <section class="footer__main__links footer__main__sections">
+                <h1>Links</h1>
+                <a href="#home" class="footer__main__links__a">
+                    Home
+                </a>
+                <a href="#about" class="footer__main__links__a">
+                    About
+                </a>
+                <a href="#" class="footer__main__links__a">
+                    Login
+                </a>
+            </section>
+        </main>
+        <section class="footer__rights">
+            &circledR; 2023 CLASSY. All Rights Reserved.
+        </section>
+    </footer>
+
+    <span class="screen-saver">
+        <section class="to-do-section__screen-saver__add-card-tab">
+            <h1 class="to-do-section__screen-saver__add-card-tab__title">
+                <ion-icon name="pencil"></ion-icon> Card Text
+            </h1>
+            <input type="text" id="card-text-input" class="to-do-section__screen-saver__add-card-tab__card-text-input">
+            <p class="to-do-section__screen-saver__add-card-tab__input-error-text">
+                Adding a text is required.
+            </p>
+            <div class="to-do-section__screen-saver__add-card-tab__actions-buttons-container">
+                <input type="button" id="add-card-tab-cancel-button" value="Cancel">
+                <input type="button" id="add-card-tab-add-button" 
+                value="Add">
+            </div>
+        </section>
+        <section class="to-do-section__screen-saver__delete-card-alert-tab">
+            <h1 class="to-do-section__screen-saver__delete-card-alert-tab__title">
+                <ion-icon name="trash-sharp"></ion-icon> Delete Card
+            </h1>
+            <p class="to-do-section__screen-saver__delete-card-alert-tab__text">
+                Are you sure about deleting this card?
+            </p>
+            <div class="to-do-section__screen-saver__delete-card-alert-tab__answer-buttons">
+                <input type="button" id="no-delete-input-button" value="No">
+                <input type="button" id="yes-delete-input-button" value="Yes">
+            </div>
+        </section>
+        <section class="to-do-section__screen-saver__change-categorie-tab">
+            <h1 class="to-do-section__screen-saver__change-categorie-tab__title">
+                <ion-icon name="albums-sharp"></ion-icon> Change Categorie
+            </h1>
+            <div class="to-do-section__screen-saver__change-categorie-tab__available-categories">
+                <div class="to-do-section__screen-saver__change-categorie-tab__available-categories-categories-button available-categories-categories-button-model" onclick="changeCardCategorie(this)">
+                    <ion-icon name="checkmark-sharp"></ion-icon>
+                    <h1>Done</h1>
+                </div>
+            </div>
+            <input type="button" id="change-categorie-cancel" value="Cancel" onclick="closeChangeCategorieTab()">
+        </section>
+        <section class="to-do-section__screen-saver__edit-card-text-tab">
+            <h1 class="to-do-section__screen-saver__edit-card-text-tab__title">
+                <ion-icon name="pencil"></ion-icon> Edit Card Text
+            </h1>
+            <input type="text" id="edit-card-text-input">
+            <div class="to-do-section__screen-saver__edit-card-text-tab__actions-buttons">
+                <input type="button" id="edit-card-cancel-button" value="Cancel">
+                <input type="button" id="edit-card-confirm-button" value="Edit">
+            </div>
+        </section>
+    </span>
+    <section class="to-do-section__screen-saver__classic-todo-list-sidebar">
+
+        <ion-icon name="print" class="to-do-section__screen-saver__classic-todo-list-sidebar__print-button" onmousedown="printClassicList()"></ion-icon>
+        <ion-icon name="close" class="to-do-section__screen-saver__classic-todo-list-sidebar__close-button" onmousedown="closeGenerateClassicSideBar()"></ion-icon>
+    </section>
+    <script src="scripts/organizer.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

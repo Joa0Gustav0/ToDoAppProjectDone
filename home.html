@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en" translate="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/comum.css">
+    <link rel="stylesheet" href="styles/home.css">
+    <link rel="stylesheet" href="styles/footer.css">
+    <link rel="shortcut icon" href="media/favicon.ico" type="image/x-icon">
+    <title>ClassY | HOME</title>
+</head>
+<body>
+    <main class="hero-section" id="home">
+        <h1 class="hero-section__title hero-section__titles hero-section__text-containers">Welcome to <span>ClassY</span>.</h1>
+        <img src="media/hero-picture.gif" alt="hero-picture" class="hero-section__hero-picture">
+        <aside class="hero-section__aside hero-section__text-containers">
+            <h1 class="hero-section__aside__headline hero-section__titles">
+                Be <span>organized</span>.<br>
+                Be <span>productive</span>.
+            </h1>
+            <p class="hero-section__aside__subheadline">
+                Whether you are a teacher or a student, ClassY will help you with your productivity and organization.
+            </p>
+            <a href="login-landing.html" class="hero-section__aside__cabutton">
+                Let's go!
+            </a>
+        </aside>
+
+        <div class="hero-section__screen-saver"></div>
+        <div class="hero-section__sidebar">
+            <img src="media/splash.png" class="hero-section__sidebar__border">
+            <a href="#home" class="hero-section__sidebar__links">
+                <ion-icon name="home-sharp"></ion-icon>
+                Home
+            </a>
+            <a href="#about" class="hero-section__sidebar__links">
+                <ion-icon name="search"></ion-icon>
+                About
+            </a>
+            <a href="login-landing.html" class="hero-section__sidebar__links">
+                <ion-icon name="person-sharp"></ion-icon>
+                Login
+            </a>
+        </div>
+        <a href="home.html" class="hero-section__logo">
+            <img src="media/classy-logo.png" alt="classy-logo">
+        </a>
+        <div class="hero-section__menu-button" 
+            onclick="setSideBarState()">
+            <div class="hero-section__menu-button__line hero-section__menu-button__line1"></div>
+            <div class="hero-section__menu-button__line hero-section__menu-button__line2"></div>
+            <div class="hero-section__menu-button__line hero-section__menu-button__line3"></div>
+        </div>
+    </main>
+    <section class="about-section" id="about">
+        <section class="about-section__waw-section about-section__section">
+            <img src="media/waw-section-picture.gif" alt="picture" class="about-section__section__picture">
+            <aside class="about-section__section__aside">
+                <h1 class="about-section__section__aside__headline">
+                    What is ClassY?
+                </h1>
+                <p class="about-section__section__aside__subheadline">
+                    <span>ClassY</span> is the <span>cleanest</span>, <span>best</span> and <span>most classy</span> <span>organizer</span> aimed at increasing your <span>productivity</span> and <span>organization</span>. whether you are a teacher or a student, ClassY will help you on your academic journey.
+                </p>
+            </aside>
+        </section>
+        <section class="about-section__wdwo-section about-section__section">
+            <img src="media/wdwo-section-picture.gif" alt="picture" class="about-section__section__picture">
+            <aside class="about-section__section__aside">
+                <h1 class="about-section__section__aside__headline">
+                    What does ClassY offers to you?
+                </h1>
+                <p class="about-section__section__aside__subheadline">
+                    ClassY offers you a dinamic and practical organizer to help you with all of your activities into the academic path.<br>
+                    Classes, activities, projects, doesn't metter... ClassY will help you.
+                </p>
+            </aside>
+        </section>
+        <section class="about-section__wiom-section about-section__section">
+            <img src="media/wiom-section-picture.gif" alt="picture" class="about-section__section__picture">
+            <aside class="about-section__section__aside">
+                <h1 class="about-section__section__aside__headline">
+                    What is our mission?
+                </h1>
+                <p class="about-section__section__aside__subheadline">
+                    ClassY's mission is to be a great ally of those involved in academic path and also to help spread knowledge around the world.
+                </p>
+            </aside>
+        </section>
+
+        <ion-icon name="arrow-back-sharp" class="about-section__sections-button about-section__sections-button-back"
+                onclick="changeAboutSection(this)"></ion-icon>
+        <ion-icon name="arrow-forward-sharp" class="about-section__sections-button about-section__sections-button-forward"
+                onclick="changeAboutSection(this)"></ion-icon>
+
+        <div class="about-section__sections-index">
+            <ion-icon name="ellipse" class="about-section__sections-index__index"></ion-icon>
+            <ion-icon name="ellipse" class="about-section__sections-index__index"></ion-icon>
+            <ion-icon name="ellipse" class="about-section__sections-index__index"></ion-icon>
+        </div>
+    </section>
+    <footer class="footer">
+        <main class="footer__main">
+            <section class="footer__main__website footer__main__sections">
+                <img src="media/classy-logo.png" class="footer__main__website__logo">
+                <p class="footer__main__website__slogan">
+                    Be organized. Be productive.
+                </p>
+            </section>
+            <section class="footer__main__author footer__main__sections">
+                <h1 class="footer__main__author__name">
+                    João Gustavo
+                </h1>
+                <div class="footer__main__author__socials">
+                    <a href="https://github.com/Joa0Gustav0" class="footer__main__author__socials__ancors" target="_blank" rel="external">
+                        <ion-icon name="logo-github"></ion-icon>
+                    </a>
+                    <a href="https://www.instagram.com/joao.gustavo_ff0050/" class="footer__main__author__socials__ancors" target="_blank" rel="external">
+                        <ion-icon name="logo-instagram"></ion-icon>
+                    </a>
+                </div>
+            </section>
+            <section class="footer__main__links footer__main__sections">
+                <h1>Links</h1>
+                <a href="#home" class="footer__main__links__a">
+                    Home
+                </a>
+                <a href="#about" class="footer__main__links__a">
+                    About
+                </a>
+                <a href="#" class="footer__main__links__a">
+                    Login
+                </a>
+            </section>
+        </main>
+        <section class="footer__rights">
+            &circledR; 2023 CLASSY. All Rights Reserved.
+        </section>
+    </footer>
+
+    <a href="#home" class="go-top-button">
+        <img src="media/go-top-button.png" class="go-top-button__bg">
+        <ion-icon name="arrow-up-sharp" class="go-top-button__icon"></ion-icon>
+    </a>
+
+    <script src="scripts/home.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
